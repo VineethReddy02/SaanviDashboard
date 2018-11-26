@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/77b24004-873e-4e79-9c55-be1e465fa115/resourceGroups/sanvi-chatbot-metrics/providers/Microsoft.Web/sites/sanvi-chatbot-metrics",
+    "appService.deploySubpath": ""
+}

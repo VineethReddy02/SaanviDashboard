@@ -1,14 +1,19 @@
-<div class="col-lg-12" id="AppComponent">
+<div class="col-lg-15" id="UserMetricsComponent">
     <div class="row">
         <div class="column">
             <p-chart type="pie" [data]="data_1"></p-chart>
+            <b><div class=spacing >Productive vs Un-Productive</div></b>
         </div>
+
         <div class="column">
+
             <p-chart type="pie" [data]="data_2"></p-chart>
+            <b><div class=spacing >Productive </div></b>
         </div>
+
         <div class="column">
             <p-chart type="pie" [data]="data_3"></p-chart>
+            <b><div class=spacing >Un-Productive </div></b>
         </div>
     </div>
 </div>
-<router-outlet></router-outlet>
