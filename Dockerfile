@@ -1,4 +1,6 @@
 From node:latest
-COPY ./ ./
+COPY ./ ./app
 EXPOSE 4200
-RUN npm start
+WORKDIR /app
+RUN npm install
+CMD ["npm","start"]
