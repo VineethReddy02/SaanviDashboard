@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../entity/User.entity';
 import { GetdataService} from '../services/getdata.service';
+import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-user-metrics',
@@ -11,7 +13,7 @@ export class UserMetricsComponent implements OnInit {
   [x: string]: any;
   userdata: User[];
   
-  constructor(private dataservice: GetdataService) { }
+  constructor(private dataservice: GetdataService, private route: ActivatedRoute, private location: Location) { }
 
  
  c : number=0;
@@ -32,11 +34,13 @@ data_1: any;
 data_2: any;
 data_3: any;
 
- colors: any=[ "#FF6371","#36A2EB","#FFCE45","#800000","#94321D","#80AB34","#894612"];
+ colors: any=[ "#FF6371","#36A2EB","#FFCE45","#800000","#80AB34","#894612","#94321D"];
 
 
   ngOnInit() {
-    this.dataservice.getPosts().subscribe(userdata => {
+    const id = +this.route.snapshot.paramMap.get('id');
+    
+    this.dataservice.getPosts(id).subscribe(userdata => {
        
         this.Prod_Metrics(userdata);
         this.Unprod_Metrics(userdata);

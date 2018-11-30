@@ -5,12 +5,14 @@ import { User } from '../entity/User.entity';
 
 @Injectable()
 export class GetdataService {
-  postsUrl: string= 'http://sanvi.ap-south-1.elasticbeanstalk.com/user/1777183255667406?format=json';
+  postsUrl: string= 'http://sanvi.ap-south-1.elasticbeanstalk.com/user';
 
   constructor(private http: HttpClient) { }
 
-  getPosts() : Observable<User[]> {
-    return this.http.get<User[]>(this.postsUrl);
+  getPosts(id: string) : Observable<User[]> {
+    const url = `${this.postsUrl}/${id}`;
+
+    return this.http.get<User[]>(url);
 
   }
 }

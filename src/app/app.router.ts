@@ -5,7 +5,7 @@ import { AppComponent } from "./app.component";
 
 export const router: Routes = [
     { path: '', component: AppComponent },
-    { path: 'metrics', component: UserMetricsComponent }
+    { path: 'metrics/:id', component: UserMetricsComponent }
 ];
 
 export const routes: ModuleWithProviders = RouterModule.forRoot(router);
