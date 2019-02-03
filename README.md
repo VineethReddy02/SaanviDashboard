@@ -1,6 +1,6 @@
 # Saanvi Chatbot Metrics Angular application
 
 
-![HOME-SCREEN](https://github.com/VineethReddy02/SaanviDashboard/tree/master/src/assets/home.png)
+![HOME-SCREEN](https://raw.githubusercontent.com/VineethReddy02/SaanviDashboard/tree/master/src/assets/home.png)
 
 
