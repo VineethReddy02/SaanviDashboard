@@ -9,7 +9,7 @@ export class GetdataService {
 
   constructor(private http: HttpClient) { }
 
-  getPosts(id: string) : Observable<User[]> {
+  getPosts(id: number) : Observable<User[]> {
     const url = `${this.postsUrl}/${id}`;
 
     return this.http.get<User[]>(url);
